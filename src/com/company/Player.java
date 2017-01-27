@@ -35,4 +35,7 @@ public class Player extends BorderPane {
         player.play();
     }
 
+    public MediaPlayer getPlayer() {
+        return player;
+    }
 }
