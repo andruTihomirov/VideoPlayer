@@ -49,8 +49,8 @@ public class MediaBar extends HBox {
             public void handle(ActionEvent event) {
                 MediaPlayer.Status status = player.getStatus();
 
-                if(status == MediaPlayer.Status.PLAYING) {
-                    if(player.getCurrentTime().greaterThanOrEqualTo(player.getTotalDuration())) {
+                if (status == MediaPlayer.Status.PLAYING) {
+                    if (player.getCurrentTime().greaterThanOrEqualTo(player.getTotalDuration())) {
                         player.seek(player.getStartTime());
                         player.play();
                     } else {
@@ -59,8 +59,8 @@ public class MediaBar extends HBox {
                     }
                 }
 
-                if(status == MediaPlayer.Status.PAUSED) {
-                    if(status == MediaPlayer.Status.PAUSED || status == MediaPlayer.Status.HALTED ||
+                if (status == MediaPlayer.Status.PAUSED) {
+                    if (status == MediaPlayer.Status.PAUSED || status == MediaPlayer.Status.HALTED ||
                             status == MediaPlayer.Status.STOPPED) {
                         player.play();
                         playButton.setText("||");
@@ -79,7 +79,7 @@ public class MediaBar extends HBox {
         time.valueProperty().addListener(new InvalidationListener() {
             @Override
             public void invalidated(Observable observable) {
-                if(time.isPressed()) {
+                if (time.isPressed()) {
                     player.seek(player.getMedia().getDuration().multiply(time.getValue() / 100));
                 }
             }
@@ -88,7 +88,7 @@ public class MediaBar extends HBox {
         vol.valueProperty().addListener(new InvalidationListener() {
             @Override
             public void invalidated(Observable observable) {
-                if(vol.isPressed()) {
+                if (vol.isPressed()) {
                     player.setVolume(vol.getValue() / 100);
                 }
             }

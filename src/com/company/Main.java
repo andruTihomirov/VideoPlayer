@@ -36,13 +36,13 @@ public class Main extends Application {
             public void handle(ActionEvent event) {
                 player.getPlayer().pause();
                 File file = fileChooser.showOpenDialog(primaryStage);
-                if(file != null) {
+                if (file != null) {
                     try {
                         player = new Player(file.toURI().toURL().toExternalForm());
                         player.setTop(menu);
                         Scene scene = new Scene(player, 720, 535, Color.BLACK);
                         primaryStage.setScene(scene);
-                    } catch(MalformedURLException e) {
+                    } catch (MalformedURLException e) {
                         e.printStackTrace();
                     }
                 }
