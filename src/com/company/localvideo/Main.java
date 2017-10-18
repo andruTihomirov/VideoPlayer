@@ -1,4 +1,4 @@
-package com.company;
+package com.company.localvideo;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -14,7 +14,7 @@ import java.net.MalformedURLException;
 
 public class Main extends Application {
 
-    private static final String TEST_VIDEO_FILE_PATH = "file:///D:/projects/VideoPlayer/SampleVideo_1280x720_1mb.mp4";
+    private static final String TEST_LOCAL_VIDEO_FILE_PATH = "file:///D:/projects/VideoPlayer/SampleVideo_1280x720_1mb.mp4";
 
     private static final int WIDTH = 720;
     private static final int HEIGHT = 535;
@@ -52,7 +52,7 @@ public class Main extends Application {
             }
         });
 
-        player = new Player(TEST_VIDEO_FILE_PATH);
+        player = new Player(TEST_LOCAL_VIDEO_FILE_PATH);
         player.setTop(menu);
         Scene scene = new Scene(player, WIDTH, HEIGHT, Color.BLACK);
         primaryStage.setScene(scene);

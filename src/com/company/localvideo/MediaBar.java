@@ -1,4 +1,4 @@
-package com.company;
+package com.company.localvideo;
 
 import javafx.application.Platform;
 import javafx.geometry.Insets;
