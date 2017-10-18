@@ -11,6 +11,8 @@ import javafx.scene.media.MediaView;
  */
 public class Player extends BorderPane {
 
+    private static final String FX_BACKGROUND_COLOR = "-fx-background-color: #bfc2c7";
+
     private Media media;
     private MediaPlayer player;
     private MediaView view;
@@ -30,7 +32,7 @@ public class Player extends BorderPane {
 
         bar = new MediaBar(player);
         setBottom(bar);
-        setStyle("-fx-background-color: #bfc2c7");
+        setStyle(FX_BACKGROUND_COLOR);
 
         player.play();
     }
